@@ -1,0 +1,16 @@
+.notification-container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  bottom: 10px;
+  flex-direction: column-reverse;
+  align-items: center;
+  z-index: 9999;
+  left: 8%;
+}
+
+@media (max-width: 767px) {
+  .notification-container {
+    left: 0%;
+  }
+}
