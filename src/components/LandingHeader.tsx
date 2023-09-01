@@ -4,6 +4,8 @@ import { BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 const LandingHeader = () => {
 
   const [again, setAgain] = useState(true);
+  const [showHeader, setShowHeader] = useState(true);
+
   useEffect(() => {
     console.log("Landing Header");
     const listItem = document.querySelectorAll("#landing-header li");
@@ -64,6 +66,24 @@ const LandingHeader = () => {
     };
   }, [again]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <header
@@ -74,7 +94,7 @@ const LandingHeader = () => {
           {/* <Logo/> */}
         </div>
 
-        <nav>
+        { showHeader && <nav>
           <ul className="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
             <li><a href="#AboutMe">About Me</a></li>
             <li><a href="#Experience">Experience</a></li>
@@ -83,6 +103,7 @@ const LandingHeader = () => {
             <li><a href="#Contact">Contact</a></li>
           </ul>
         </nav>
+        }
 
         <nav className="flex flex-grow justify-end basis-0">
           <ul className="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">

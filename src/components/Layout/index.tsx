@@ -3,9 +3,10 @@ import "./layout.css";
 import { Outlet } from "react-router-dom";
 
 function Layout() {
+
   return (
     <>
-      <LandingHeader/>
+      <LandingHeader />
       <div className="main-content">
         <Outlet />
       </div>

@@ -6,7 +6,7 @@ const Section: React.FC<{ backgroundColor: string, color: string, title: string,
 
   return (
     <section
-      className={`landing-section ${background} h-screen w-screen text-center overflow-hidden relative`}
+      className={`landing-section h-screen w-screen text-center overflow-hidden relative`}
       data-header-color={color}
     >
       <div className="z-30 relative h-full flex flex-col">
@@ -20,7 +20,7 @@ const Section: React.FC<{ backgroundColor: string, color: string, title: string,
           {footerContent}
         </footer>
       </div>
-      <div className="absolute top-0 bottom-0 h-full w-full z-10">
+      <div className={`absolute ${background} top-0 bottom-0 h-full w-full z-10`}>
         {backgroundContent}
       </div>
     </section>
