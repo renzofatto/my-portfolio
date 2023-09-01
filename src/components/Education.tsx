@@ -5,8 +5,6 @@ function Education() {
     <Section
       title='Education'
       subtitle='I went to Scuola Italiana di Montevideo'
-      color="white"
-      backgroundColor="black"
     />
   )
 }

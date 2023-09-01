@@ -5,8 +5,6 @@ function AboutMe() {
     <Section
       title='About Me'
       subtitle='Im Renzo Fattorini'
-      color="white"
-      backgroundColor='black'
     />
   )
 }

@@ -5,8 +5,6 @@ function Experience() {
     <Section
       title='Experience'
       subtitle='I have worke at IKIGAI and Crunchloop'
-      color="black"
-      backgroundColor="white"
     />
   )
 }

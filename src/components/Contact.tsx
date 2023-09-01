@@ -5,8 +5,6 @@ function Contact() {
     <Section
       title='Contact'
       subtitle='CallMe'
-      color="white"
-      backgroundColor="black"
     />
   )
 }
