@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-const Section: React.FC<{ title: string, subtitle: string, footerContent?: ReactNode, backgroundContent?: ReactNode }> = ({ title, subtitle, footerContent, backgroundContent }) => {
+const Section: React.FC<{ title: string, subtitle: ReactNode, picture?: ReactNode, footerContent?: ReactNode, backgroundContent?: ReactNode }> = ({ title, picture, subtitle, footerContent, backgroundContent }) => {
 
   return (
     <section
@@ -12,7 +12,14 @@ const Section: React.FC<{ title: string, subtitle: string, footerContent?: React
           <h2 className={`text-white pt-40 text-[40px] font-medium`}>
             {title}
           </h2>
-          <p className={`text-white text-sm`}>{subtitle}</p>
+          <div>
+            <div className={`text-white text-sm px-40 py-5`}>
+              {subtitle}
+            </div>
+            <div>
+              {picture}
+            </div>
+          </div>
         </header>
         <footer className="flex flex-col flex-grow justify-end pb-20">
           {footerContent}
