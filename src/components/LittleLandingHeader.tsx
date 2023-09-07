@@ -69,11 +69,11 @@ const LandingHeader = () => {
     <>
       <header
         id="landing-header"
-        className="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-current"
+        className="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white"
       >
 
         <nav className="flex flex-grow justify-center basis-0">
-          <ul className="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
+          <ul className="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-white [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
             <li><a href="https://github.com/renzofatto" target="_blank" rel="noopener noreferrer"><BsGithub/></a></li>
             <li><a href="https://www.linkedin.com/in/renzo-fattorini-paracampo-6821ba1a6/" target="_blank" rel="noopener noreferrer"><BsLinkedin/></a></li>
             <li><a href="https://www.instagram.com/renzofattorini/" target="_blank" rel="noopener noreferrer"><BsInstagram/></a></li>
